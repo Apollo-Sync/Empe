@@ -125,6 +125,23 @@ sudo systemctl daemon-reload
 sudo systemctl enable emped
 sudo systemctl start emped && sudo journalctl -fu emped -o cat
 ```
+**Wallet**
+```
+#Add new wallet
+emped keys add wallet
+
+#Recover Wallet
+emped keys add wallet --recover
+
+#List Wallet
+emped keys list
+
+#Delete Wallet
+emped keys delete wallet
+
+#Check Wallet Balance
+emped q bank balances $(emped keys show wallet -a)
+```
 
 **Genesis & Addrbook**
 ```
